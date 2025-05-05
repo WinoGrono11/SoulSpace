@@ -16,7 +16,7 @@ tabs.forEach(tab => {
 // EmailJS init (replace with your keys)
 emailjs.init("wCFHI6wYiQQY9IQVM");
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+document.getElementById("kontaktForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   emailjs.send("service_izikrkg", "template_9spsxvi", {
