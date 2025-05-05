@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulSpace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <header>
+    <h1 class="quote">"Niech światło zrodzone z ciemności prowadzi dalej tych, którzy zbłądzili..."</h1>
+    <nav>
+      <button class="tab" data-tab="smile">Uśmiech</button>
+      <button class="tab" data-tab="support">Wsparcie</button>
+      <button class="tab" data-tab="info">Info</button>
+    </nav>
+  </header>
+
+  <section class="tab-content" id="smile">
+    <p>
+      Narzędzia edukacyjne chciałbym stworzyć do szkół, bombonierkę i wino dla Mamy... Dla uśmiechu.  
+      Kawa i papieros dla inspiracji, bo bez tego to miejsce by nie powstało.  
+      To tylko przykłady, choć mam nadzieję, że dobrze że moja wizja jest jasna — cele osobiste i szczere.
+    </p>
+  </section>
+
+  <section class="tab-content" id="support">
+    <p>Wesprzyj, jeśli czujesz — dobrowolnie, symbolicznie lub z potrzeby serca:</p>
+    <p><strong>BTC:</strong> 1YourWalletAddressHere</p>
+  </section>
+
+  <section class="tab-content" id="info">
+    <p>Strona anonimowa. Żadne dane nie są przechowywane. Wiadomości są usuwane po odczytaniu.</p>
+  </section>
+
+  <main>
+    <form id="contact-form">
+      <textarea name="message" placeholder="Napisz, co czujesz... Jeśli chcesz odpowiedź, dodaj e-mail w treści."></textarea>
+      <label class="checkbox-label">
+        <input type="checkbox" id="reply-checkbox"> Chcę odpowiedzi
+      </label>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Niech ta przestrzeń służy. Tworzona z serca, dla serc.</p>
+  </footer>
+</body>
+</html>

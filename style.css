@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #000;
+  background-image: url('loop.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.quote {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: gold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid gold;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.tab:hover {
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.tab-content {
+  display: none;
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+form {
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  resize: vertical;
+  backdrop-filter: blur(4px);
+}
+
+.checkbox-label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: gold;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ffd700;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.85em;
+  color: #ccc;
+}
