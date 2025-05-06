@@ -1,30 +1,29 @@
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
+const SERVICE_ID = "service_izikrkg";
+const TEMPLATE_ID = "template_9spsxvi";
+const PUBLIC_KEY = "wCFHI6wYiQQY9IQVM";
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const id = tab.getAttribute('data-tab');
-    const content = document.getElementById(id);
-    const isVisible = content.style.display === 'block';
-
-    contents.forEach(c => c.style.display = 'none');
-
-    content.style.display = isVisible ? 'none' : 'block';
+function toggleSection(id) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    if (section.id === id) {
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    } else {
+      section.style.display = 'none';
+    }
   });
-});
+}
 
-// EmailJS init (replace with your keys)
-emailjs.init("wCFHI6wYiQQY9IQVM");
-
-document.getElementById("kontaktForm").addEventListener("submit", function(e) {
+document.getElementById('kontaktForm').addEventListener('submit', function (e) {
   e.preventDefault();
-
-  emailjs.send("service_izikrkg", "template_9spsxvi", {
-    message: this.message.value
-  }).then(() => {
-    alert("Wiadomość wysłana. Dziękujemy.");
-    this.reset();
-  }, (error) => {
-    alert("Błąd: " + JSON.stringify(error));
-  });
+  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+    .then(() => {
+      alert("Wysłane. Dzięki za zaufanie.");
+      this.reset();
+    }, (error) => {
+      alert("Błąd wysyłki: " + error.text);
+    });
 });
+
+(function () {
+  emailjs.init(PUBLIC_KEY);
+})();
