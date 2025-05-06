@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoulSpace</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
-  <div class="background-overlay"></div>
+  <div class="container">
+    <div class="tabs">
+      <button onclick="toggleSection('wsparcie')">Wsparcie</button>
+      <button onclick="toggleSection('usmiech')">Uśmiech</button>
+      <button onclick="toggleSection('anonim')">Anonimowość</button>
+    </div>
 
-  <header>
-    <h1 class="quote">"Niech światło zrodzone z ciemności prowadzi dalej tych, którzy zbłądzili..."</h1>
-    <nav>
-      <button class="tab" data-tab="smile">Uśmiech</button>
-      <button class="tab" data-tab="support">Wsparcie</button>
-      <button class="tab" data-tab="info">Info</button>
-    </nav>
-  </header>
+    <div id="wsparcie" class="section">
+      <p>Adres portfela BTC: <strong>bc1qexampleaddressxyz...</strong></p>
+      <p>Wspieranie jest całkowicie dobrowolne. Dziękujemy!</p>
+    </div>
 
-  <section class="tab-content" id="smile">
-    <p>
-      Narzędzia edukacyjne chciałbym stworzyć do szkół, bombonierkę i wino dla Mamy... Dla uśmiechu.  
-      Kawa i papieros dla inspiracji, bo bez tego to miejsce by nie powstało.  
-      To tylko przykłady, choć mam nadzieję, że dobrze że moja wizja jest jasna — cele osobiste i szczere.
-    </p>
-  </section>
+    <div id="usmiech" class="section">
+      <p>Chcemy nieść uśmiech. Tworzymy przestrzeń do dzielenia się emocjami, refleksją i nadzieją.</p>
+      <p>To miejsce to nasze cele osobiste i wspólna podróż. Narzędzia edukacyjne dla szkół. Bombonierka i wino dla Mamy. Kawa i papieros dla inspiracji...</p>
+    </div>
 
-  <section class="tab-content" id="support">
-    <p>Wesprzyj, jeśli czujesz — dobrowolnie, symbolicznie lub z potrzeby serca:</p>
-    <p><strong>BTC:</strong> 1YourWalletAddressHere</p>
-  </section>
+    <div id="anonim" class="section">
+      <p>Strona anonimowa. Żadne dane nie są przechowywane. Wiadomości są usuwane po odczytaniu.</p>
+    </div>
 
-  <section class="tab-content" id="info">
-    <p>Strona anonimowa. Żadne dane nie są przechowywane. Wiadomości są usuwane po odczytaniu.</p>
-  </section>
-
-  <main>
     <form id="kontaktForm">
-      <textarea name="message" placeholder="Napisz, co czujesz... Jeśli chcesz odpowiedź, dodaj e-mail w treści."></textarea>
-      <label class="checkbox-label">
-        <input type="checkbox" id="reply-checkbox"> Chcę odpowiedzi
-      </label>
-      <button type="submit">Wyślij wiadomość</button>
+      <textarea name="message" placeholder="Napisz, co chcesz powiedzieć światu..." required></textarea>
+      <input type="email" name="reply_to" placeholder="Email (opcjonalnie, by otrzymać odpowiedź)" />
+      <label><input type="checkbox" required /> Akceptuję wysłanie anonimowej wiadomości</label>
+      <button type="submit">Wyślij</button>
     </form>
-  </main>
+  </div>
 
   <footer>
-    <p>Niech ta przestrzeń służy. Tworzona z serca, dla serc.</p>
+    <p>Stworzone z zaufaniem i chaosem Wszechświata.</p>
   </footer>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>
